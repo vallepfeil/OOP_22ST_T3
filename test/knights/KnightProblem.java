@@ -57,16 +57,16 @@ public class KnightProblem {
 
                     List<Field[]> neueAnwaerter = new ArrayList<>();
 
-                    for (Field[] aktuellerARR : anwaerterListe) {
+                    for (Field[] aktuellerArr : anwaerterListe) {
                         // Füge 8 potenziell neue Wege hinzu
-                        solutionsHelper(2, 1, aktuellerARR, k, solutionList, neueAnwaerter);
-                        solutionsHelper(2, -1, aktuellerARR, k, solutionList, neueAnwaerter);
-                        solutionsHelper(-2, 1, aktuellerARR, k, solutionList, neueAnwaerter);
-                        solutionsHelper(-2, -1, aktuellerARR, k, solutionList, neueAnwaerter);
-                        solutionsHelper(1, 2, aktuellerARR, k, solutionList, neueAnwaerter);
-                        solutionsHelper(1, -2, aktuellerARR, k, solutionList, neueAnwaerter);
-                        solutionsHelper(-1, 2, aktuellerARR, k, solutionList, neueAnwaerter);
-                        solutionsHelper(-1, -2, aktuellerARR, k, solutionList, neueAnwaerter);
+                        solutionsHelper(2, 1, aktuellerArr, k, solutionList, neueAnwaerter);
+                        solutionsHelper(2, -1, aktuellerArr, k, solutionList, neueAnwaerter);
+                        solutionsHelper(-2, 1, aktuellerArr, k, solutionList, neueAnwaerter);
+                        solutionsHelper(-2, -1, aktuellerArr, k, solutionList, neueAnwaerter);
+                        solutionsHelper(1, 2, aktuellerArr, k, solutionList, neueAnwaerter);
+                        solutionsHelper(1, -2, aktuellerArr, k, solutionList, neueAnwaerter);
+                        solutionsHelper(-1, 2, aktuellerArr, k, solutionList, neueAnwaerter);
+                        solutionsHelper(-1, -2, aktuellerArr, k, solutionList, neueAnwaerter);
                     } anwaerterListe.clear(); anwaerterListe.addAll(neueAnwaerter);
                 }
             }
