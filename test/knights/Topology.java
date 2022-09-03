@@ -23,7 +23,7 @@
  * innerhalb des Schachbretts liegt.
  * Diese map-Methode kann verwendet werden, um die Springerzüge unter der jeweiligen Topologie
  * zu berechnen: Befinde sich ein Springer auf einem Feld f1=new Field(0,1). Dann
- * wäre ein potentieller Springerzug der nach f2=new Field(-1,-1), wenn man nämlich versucht,
+ * wäre ein potenzieller Springerzug der nach f2=new Field(-1,-1), wenn man nämlich versucht,
  * eine Zeile nach oben und zwei Spalten nach links zu ziehen. Natürlich liegt f2
  * außerhalb des Schachbretts. Ob der Zug bei der gegebenen Topologie (sei das hier t) möglich
  * ist, sieht man am Ergebnis f3=t.map(f2). Der Zug ist nicht erlaubt, wenn f3 gleich

@@ -29,8 +29,8 @@ public class Field {
     /**
      * Konstruktor
      *
-     * @param row    Zeile neg-pos, ganzz
-     * @param column Spalte neg-pos, ganzz
+     * @param row    Zeile neg-pos, ganzzahlig
+     * @param column Spalte neg-pos, ganzzahlig
      */
     public Field(int row, int column) {
         this.row = row; this.column = column;
@@ -53,9 +53,9 @@ public class Field {
     /**
      * Vergleichs-Methoden equals, hashCode
      * Generierung, weil Override notwendig
-     * Field-Objekte zum Vgl.; Parameter Row und Column; Zur Gleichbehandlung
+     * Field-Objekte zum Vgl.; Parameter Row und Column; zur Gleichbehandlung
      *
-     * @param o
+     * @param o Objekt
      * @return row == field.row && column == field.column, Objects.hash(row, column)
      */
     @Override

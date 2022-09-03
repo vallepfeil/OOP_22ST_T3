@@ -162,6 +162,9 @@ public class SpringerTest {
         final Topology topology = new TorusTopology(2, 2);
         final KnightProblem problem = new KnightProblem(topology);
         final List<Solution> solutions = problem.solve();
+        for(Solution s : solutions){
+            System.out.println(s.toString());
+        }
         assertEquals(8, solutions.size());
         assertEquals(Set.of(new Solution(field(0, 0), field(0, 1), field(1, 1), field(1, 0)),
                             new Solution(field(0, 0), field(1, 0), field(1, 1), field(0, 1)),

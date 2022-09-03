@@ -4,7 +4,7 @@
  * VP
  * Aufgabe 2
  * Realisieren Sie im Paket knights die Klasse Solution. Jede Instanz entspreche einer Folge von
- * Field-Instanzen, womit man eine Springerroute darstellen kann. Die Klasse soll die folgenden
+ * Field-Instanzen, womit man eine Springer-Route darstellen kann. Die Klasse soll die folgenden
  * Methoden bzw. Konstruktor aufweisen:
  * • public Solution(Field... array) erstellt ein neues Solution-Objekt für die übergebene
  * Folge von Field-Instanzen.
@@ -24,25 +24,26 @@ public class Solution {
 
     /**
      * Konstruktor
+     * es gab zwei Zeiger auf dasselbe Objekt, somit war der Vgl. immer true
+     * jetzt wird beim Erstellen des Objekts immer ein neuer Zeiger mit anderer Speicheradresse erzeugt
+     * damit wird sichergestellt, dass nun nur noch inhaltliche Vgl. stattfinden
      *
      * @param fieldArray [] variable Größe, Initialisierung nicht notwendig
      */
     public Solution(Field... fieldArray) {
-        this.fieldArray = fieldArray;
+        this.fieldArray = Arrays.copyOf(fieldArray, fieldArray.length);
     }
 
     /**
      * toString-Methode
      *
-     * @return Kann sein, dass er nur den Namen vom Objekt im Speicher gibt TODO OFFEN!!!
+     * @return Kann sein, dass er nur den Namen vom Objekt im Speicher gibt, erlegt, von fieldArray zu Arrays geändert
      */
-    public String toString() {return (fieldArray.toString());}
+    public String toString() {return (Arrays.toString(fieldArray));}
 
     /**
-     * TODO! Equals scheint noch nicht zu fkt.!
-     *
-     * @param o
-     * @return
+     * @param o Objekt
+     * @return Vgl.
      */
     @Override
     public boolean equals(Object o) {

@@ -31,7 +31,7 @@ package knights;
 
 /**
  * Konstruktor
- * Erbt von Topology, Konstruktur via super()
+ * Erbt von Topology, Konstruktor via super()
  */
 public class StandardTopology extends Topology {
     public StandardTopology(int rows, int columns) throws IllegalArgumentException {
@@ -42,7 +42,7 @@ public class StandardTopology extends Topology {
      * Auswertung Feld
      *
      * @param f wird zurückgegeben, wenn innerhalb des Schachbretts
-     * @return null wird zurückggeeben, wenn außerhalb des Schachbretts
+     * @return null wird zurückgegeben, wenn außerhalb des Schachbretts
      */
     @Override
     public Field map(Field f) {
